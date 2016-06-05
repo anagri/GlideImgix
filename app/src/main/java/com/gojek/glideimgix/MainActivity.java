@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         ImageView imgSplash = (ImageView) findViewById(R.id.img_splash);
         Glide.with(this)
-                .load("http://gojek-gomart.imgix.net/gojek_blog_splash_sample.jpg")
+                .load(new ImgixUrl("http://gojek-gomart.imgix.net/gojek_blog_splash_sample.jpg"))
                 .into(imgSplash);
     }
 }

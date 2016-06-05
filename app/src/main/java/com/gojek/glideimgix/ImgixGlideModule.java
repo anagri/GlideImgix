@@ -1,0 +1,21 @@
+package com.gojek.glideimgix;
+
+import android.content.Context;
+
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.GlideBuilder;
+import com.bumptech.glide.module.GlideModule;
+
+import java.io.InputStream;
+
+public class ImgixGlideModule implements GlideModule {
+    @Override
+    public void applyOptions(Context context, GlideBuilder builder) {
+
+    }
+
+    @Override
+    public void registerComponents(Context context, Glide glide) {
+        glide.register(ImgixUrl.class, InputStream.class, new ImgixGlideModelLoaderFactory());
+    }
+}
